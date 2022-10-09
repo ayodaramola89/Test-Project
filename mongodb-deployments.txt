@@ -1,0 +1,6 @@
+# This is the mongo db deployment using helm
+# we will use mongodb helm chart to deploy our mongodb statefulset using the command:
+
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+$ helm search repo bitnami
+$ helm install mongodb bitnami/mongodb

@@ -1,0 +1,30 @@
+# Create an EC2 instance on AWS or VM on Azure
+# Run the kubernetes minitube script which will be used as a single node K8s Cluster
+# Run the helm.sh script to install helm 
+
+# Let's create an helm configuration file for the application that we will be calling "my-test-app"
+
+$ helm create my-test-app
+
+# The above command creates a directory "my-test-app"
+$ ls
+$ ls my-test-app/
+# the above is better viwed using the tree command
+$ sudo apt install tree
+$ tree my-test-app
+$ helm template my-test-app
+$ helm show values my-test-app
+$ vi values.yaml
+
+# we will amke changes to the image repository and enetr the url of repository in dockerhub
+# image:
+#   repository: mylandmarktech/java-web-app
+
+# we will also enable ingress by changing "false" to "true"
+
+# the following command is used in deploying the application using the helm package
+$ helm install app my-test-app/
+$ helm ls
+
+# To confirm if the application is running:
+$ kubectl get all

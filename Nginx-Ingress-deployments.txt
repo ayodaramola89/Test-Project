@@ -1,0 +1,7 @@
+# This is process of creating an Nginx Ingress deployment and Ingress Rules using helm charts
+
+$ helm repo add ingress-nginx https://github.com/kubernetes/ingress-nginx
+$ helm search repo ingress-nginx
+$ helm install ingress ingress-nginx/ingress-nginx
+
+# We can now create an ingress rule in a .yaml file
